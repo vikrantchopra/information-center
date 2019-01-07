@@ -6,11 +6,12 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import InfoCard from './InfoCard';
 import BookmarkCards from './BookmarkCards'
+import AgileCards from './AgileCards';
 
 
 const InfoTab = () => {
 
-  const [tabValue, setTabValue] = useState(0)
+  const [tabValue, setTabValue] = useState(1)
 
   const handleInputChange = (event,value) => {
     //const { name, value } = event.target
@@ -26,12 +27,12 @@ const InfoTab = () => {
           <Tabs value={tabValue} onChange={handleInputChange}>
             <Tab label="Github" />
             <Tab label="Bookmarks" />
-            <Tab label="Miscellaneous" />
+            <Tab label="Agile" />
           </Tabs>
         </AppBar>
         {tabValue === 0 && <InfoCard />}
         {tabValue === 1 && <BookmarkCards />}
-        {tabValue === 2 && <div>Item Three</div>}
+        {tabValue === 2 && <div><AgileCards /></div>}
 
         </div>
         
